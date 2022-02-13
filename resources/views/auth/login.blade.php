@@ -12,7 +12,7 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ isset($guard)? url($guard.'/login') route('login') }}">
+        <form method="POST" action="{{ isset($guard) ? url($guard.'/login') :  route('login') }}">
             @csrf
 
             <div>
@@ -27,7 +27,7 @@
 
             <div class="block mt-4">
                 <label for="remember_me" class="flex items-center">
-                    <x-jet-checkbox id="remember_me" name="remember" />
+                    <input id="remember_me" type="checkbox" class="form-checkbox" name="remember">
                     <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                 </label>
             </div>
@@ -40,7 +40,7 @@
                 @endif
 
                 <x-jet-button class="ml-4">
-                    {{ __('Log in') }}
+                    {{ __('Login') }}
                 </x-jet-button>
             </div>
         </form>
