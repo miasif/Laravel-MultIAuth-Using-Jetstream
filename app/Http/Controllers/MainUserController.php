@@ -55,20 +55,7 @@ class MainUserController extends Controller
         return redirect()->route('user_profile')->with('message','Password Update Successfully');
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// yygyuyuyguygygu
         // $validateData = $request->validate([
     //        'old_password' => 'required',
     //        'password' => 'required|confirmed',
